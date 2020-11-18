@@ -40,6 +40,13 @@
       height: calc(1 * #{$header-height});
     }
   }
+  .github-logo-container {
+    padding: $global-padding * 0.4;
+    img.github-logo {
+      height: 24px;
+      width: auto;
+    }
+  }
 }
 /* Navigation */
 /* Footer */
