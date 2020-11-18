@@ -1,0 +1,30 @@
+$colors: (
+  'primary-color': $primary-color,
+  'secondary-color': $secondary-color,
+  'success-color': $success-color,
+  'warning-color': $warning-color,
+  'alert-color': $alert-color,
+  'light-gray': $light-gray,
+  'medium-gray': $medium-gray,
+  'dark-gray': $dark-gray,
+  'light-blue': $light-blue,
+  'blue': $medium-blue,
+  'medium-blue': $light-blue,
+  'dark-blue': $dark-blue,
+  'light-pink': $light-pink,
+  'pink': $medium-pink,
+  'medium-pink': $light-pink,
+  'dark-pink': $dark-pink,
+  'light-neon': $light-neon,
+  'neon': $medium-neon,
+  'medium-neon': $light-neon,
+  'dark-neon': $dark-neon,
+);
+
+@each $color, $hex in $colors {
+  .#{$color}-bg {
+    background-color: $hex;
+  }
+}
+
+/* Backgrounds */

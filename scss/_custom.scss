@@ -1,0 +1,84 @@
+/* Globals */
+*:focus {
+  outline: 1px dotted $anchor-color;
+}
+/* Layout */
+.main-content {
+  // Margin-top would be for fixed header
+  // margin-top: $mobile-header-height;
+  // @include breakpoint(medium) {
+  //   margin-top: $header-height;
+  // }
+  min-height: $mobile-fullheight-header-footer;
+  @include breakpoint(medium) {
+    min-height: $fullheight-header-footer;
+  }
+}
+
+/* Header */
+.site-header {
+  background-color: $white;
+  min-height: $mobile-header-height;
+  box-shadow: none;
+  //transition: $global-transition;
+  &.is-stuck {
+    box-shadow: $shadow;
+    // transition: $global-transition;
+    min-height: $header-height-stuck;
+    img.logo {
+      @include breakpoint(medium) {
+        height: calc(1 * #{$header-height-stuck});
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    min-height: $header-height;
+  }
+  img.logo {
+    height: calc(1 * #{$mobile-header-height - $gutter * 0});
+    @include breakpoint(medium) {
+      height: calc(1 * #{$header-height});
+    }
+  }
+}
+/* Navigation */
+/* Footer */
+.site-footer {
+  overflow: hidden; // Foundation Menu
+  min-height: $mobile-footer-height;
+  @include breakpoint(medium) {
+    min-height: $footer-height;
+  }
+}
+/* Home */
+#welcome {
+  position: relative;
+  .scroll-down {
+    position: absolute;
+    bottom: $gutter;
+    left: 50%;
+    margin-left: -25px;
+  }
+}
+/* Page */
+/* Single */
+/* F6 */
+.block-grid {
+  .cell {
+    margin-bottom: $space-medium;
+  }
+}
+.menu {
+  li {
+    a {
+      font-family: $header-font-family;
+      font-weight: 600;
+    }
+  }
+}
+table,
+label {
+  font-family: $header-font-family;
+  font-weight: 400;
+}
+/* Plugins */
